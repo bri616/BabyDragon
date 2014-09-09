@@ -8,6 +8,21 @@ class Dragon
     puts "#{@name} is born"
   end
 
+  def dispatch(input_str)
+      case input_str
+      when "feed"
+        feed
+      when "walk"
+        walk
+      when "put_to_bed" || "put to bed"
+        put_to_bed
+      when "rock"
+        rock
+      when "toss"
+        toss
+      end
+  end
+
   def feed
     puts "You feed #{@name}"
     @stuff_in_belly = 10
@@ -61,7 +76,7 @@ class Dragon
   end
 
   def poopy?
-    @stuff_in_intesting >= 8
+    @stuff_in_intestine >= 8
   end
 
   def passage_of_time
